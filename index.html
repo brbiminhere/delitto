@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Login page</title>
+</head>
+<body>
+<form>
+ <label for="pswd">La miglior insegnante di storia e filosofia di sempre: </label>
+ <input type="password" id="pswd">
+ <input type="button" value="Invio" onclick="checkPswd();" />
+</form>
+<!--Function to check password the already set password is admin-->
+<script type="text/javascript">
+ function checkPswd() {
+     var confirmPassword = "pollaci";
+     confirmPassword = confirmPassword.toLowerCase();
+     var password = document.getElementById("pswd").value;
+     if (password == confirmPassword) {
+          window.location="unauthorized.html";
+     }
+     else{
+         alert("La hai avuta anche tu");
+     }
+ }
+</script>
+</body>
+</html>
